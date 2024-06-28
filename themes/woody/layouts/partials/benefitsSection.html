@@ -1,0 +1,47 @@
+{{ with .Site.Data.home.benefits }}
+{{ if .enable }}
+
+{{ "<!-- Section Benefits -->" | safeHTML }}
+<section class="section-benefits" id="benefits">
+
+  <div class="row">
+
+    <div class="col-md-6 left-box" style="background-image: url({{ .image | absURL }});">
+
+      <div class="title-section wow fadeUp" data-wow-delay=".3s">
+        
+        <iframe  width="560" height="315" src="https://www.youtube.com/embed/E4a_am9kOPo?si=jDYyqMiIpotrgF8T" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; web-share; fullscreen;"  ></iframe>
+          
+      </div>
+
+    </div>
+
+
+    <div class="col-md-6 right-box">
+
+      <div class="row">
+
+        {{ range .items }}
+        <div class="col-md-6">
+          <div class="benefits-box wow fadeUp" data-wow-delay=".3s">
+            <div class="icon">
+              <i aria-hidden="true" class="{{ .icon }}"></i>
+            </div>
+            <div class="info-box">
+              <h2>{{ .title }}</h2>
+              <p>{{ .text | safeHTML }}</p>
+            </div>
+          </div>
+        </div>
+        {{ end }}
+
+      </div>
+
+    </div>
+
+</div>
+
+</section>
+
+{{ end }}
+{{ end }}

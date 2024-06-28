@@ -1,0 +1,116 @@
+### Sections content configuration file
+### Here you can find all content in all pre-build sections
+
+### Header [ headerSection ]
+### NetworkGraph [ NetworkGraphSection ]
+NetworkGraph:
+  enable: true
+  image: "/images/Obligations_fees_low_res_30margin.png"
+  title: "The power of the network graph..."
+  text: "<p>Under business-as-usual, we know about our customers and suppliers, and maybe a little about our supply chain here and there.</p>
+  <p>But when we share a bit of trading information, the network graph of the local economy is revealed.</p>
+  <p>And with sophisticated Collaborative Finance tools we can do things which seem almost magical – systematically eliminate debt, optimise the use of available cash, give business clusters ways to make their trade credit go further, plug gaps in the circular economy, incubate start-up ecosystems, and insulate the local economy as a whole from credit crunches.</p>
+  <p>We're starting with 'loop clearing' - eliminating gridlocked B2B debts on a 28-day cycle. Read on to see how it could boost your business - together, we can turbocharge the Merseyside economy.</p>"
+
+### Benefits [ benefitsSection ]
+benefits:
+  enable: true
+  image: "/images/PurpleBackground.png"
+  title: "Benefits"
+  text: ""
+  items:
+    - title: "Reduce late payment"
+      icon: "far fa-credit-card"
+      text: "Eliminating the smallest common amount in a loop turns a potential payment gridock into an easily-resolvable chain, so everyone is more likely to get paid on time."
+
+    - title: "Clear intention to pay"
+      icon: "far fa-thumbs-up"
+      text: "Customers commit to settling their bills in full when submitting them to the system, giving advance notice of a clear intention to pay any residual post-clearing debts."
+
+    - title: "Improve cashflow"
+      icon: "fas fa-pound-sign"
+      text: "Lower cashflow volatility, lower working capital requirements, reduced cost-of-finance, lower leverage on the balance sheet."
+
+    - title: "New trading partners"
+      icon: "far fa-handshake"
+      text: "Finding new local customers and suppliers who are also members means there's a chance even more of your trade will be cleared without cash."
+
+
+### Team [ teamSection ]
+team:
+  enable: true
+  image: "/images/PurpleBackground.png"
+  title: "Meet some of the team - needless to say, there are many others working hard behind the scenes to make Local Loop Merseyside a success."
+  text:
+  member:
+    - title: "Tom Woodroof"
+      signature: "Co-founder, Mutual Credit Services"
+      image: "/images/Tom.png"
+      text: "Tom moved here in 2014 to do his Ph.D in applied nuclear physics at the University of Liverpool, and has stayed ever since. Since co-founding <a href='https://mutualcredit.services/' target='_blank'> Mutual Credit Services</a> he spends more time in the business district than on campus, but he has close links to several University departments and can still be found playing tennis with the Mersey Bowmen at the weekends."
+      socialIcons:
+      - title: "LinkedIn"
+        icon: "fa-brands fa-linkedin"
+        url: "https://www.linkedin.com/in/tom-woodroof-478815145/"
+
+    - title: "Dil Green"
+      image: "/images/Dil.png"
+      signature: "Co-founder, Mutual Credit Services"
+      text: "After a career as an architect and builder, Dil is now focused on the urgent need for social renovation, and convinced that digital tools designed to follow social needs offer a powerful support for development. Dil is a serial founder, most recently of <a href='https://mutualcredit.services/' target='_blank'> Mutual Credit Services</a>, and lives in London."
+      socialIcons:
+      - title: "LinkedIn"
+        icon: "fa-brands fa-linkedin"
+        url: "https://www.linkedin.com/in/dilgreen/"
+
+    - title: "Tomaž Fleischman"
+      signature: "Lead Researcher, Informal Systems"
+      image: "/images/Tomaz.png"
+      text: "Tomaž is Lead Researcher at <a href='https://informal.systems/' target='_blank'> Informal Systems</a>. He believes Collaborative Finance will help us reach our sustainability goals. He enjoys walking, reading, gardening, and skiing."
+      socialIcons:
+      - title: "LinkedIn"
+        icon: "fa-brands fa-linkedin"
+        url: "https://www.linkedin.com/in/tomazfleischman/"
+
+    - title: "Mark Yamashita"
+      image: "/images/Mark.png"
+      signature: "Product Lead, Informal Systems"
+      text: "Mark is a Product Lead at <a href='https://informal.systems/' target='_blank'> Informal Systems</a> focusing on Collaborative Finance. He believes in delivering great experiences that change the world of finance for the better. Outside of work you’ll find Mark running (either for sport or chasing after his two small children)."
+      socialIcons:
+      - title: "LinkedIn"
+        icon: "fa-brands fa-linkedin"
+        url: "https://www.linkedin.com/in/mark-yamashita/"
+
+### Contact [ contactSection ]
+contact:
+  enable: true
+  image: "/images/PurpleBackground.png"
+  title: "Get in touch"
+  text: "<p>Contact us via the form, or using the details below.</p>"
+  formspreeURL: "https://formspree.io/f/xayggrbz"
+  contactInfo:
+      - title: "Address"
+        icon: "fa-solid fa-location-dot"
+        text: "Mutual Credit Services<br>DoES Liverpool<br>1st Floor, The Tapestry<br>68-76 Kempston Street<br>Liverpool, L3 8HL"
+
+      - title: "Phone number"
+        icon: "fas fa-phone"
+        text: "0151 703 0081"
+
+      - title: "Email"
+        icon: "fas fa-paper-plane"
+        text: "hello@localloop-merseyside.co.uk"
+
+### Subscribe [ subscribeSection ]
+subscribe:
+  enable: true
+  image: "/images/PurpleBackground.png"
+  title: "Could this benefit your business? Find out now."
+  icon: "fas fa-paper-plane"
+  mailChimpURL: "https://localloopmerseyside.substack.com/embed"
+  # Google Maps widget: If "googleMapsApiKey" is not set, no key will be passed to Google (which likely results in a broken map widget).
+  googleMapsApiKey: "AIzaSyAV1KS10sb3O462XosfZTKohHJwi6C0joo"
+  latitude: "53.4000020"
+  longitude: "-2.9833330"
+  iconLocation: "/images/icon-location.png"
+  titleIconLocation: "Merseyside, United Kingdom"
+  colorMap: "#24b7a4"
+  mapZoom: 11

@@ -1,3 +1,5 @@
+# llm-june2024-refresh
+
 ---
 
 Example [Hugo] website using GitLab with [Netlify](https://www.netlify.com/).
@@ -51,4 +53,3 @@ unless you want to contribute back to the upstream project.
 [hugo]: https://gohugo.io
 [install]: https://gohugo.io/overview/installing/
 [documentation]: https://gohugo.io/overview/introduction/
-# llm-june2024-refresh
