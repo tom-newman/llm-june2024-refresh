@@ -2,6 +2,16 @@
 ### Here you can find all content in all pre-build sections
 
 ### Header [ headerSection ]
+header:
+  enable: true
+  logo: "/images/LI-Profile-LL_500x175.png"
+  widthLogo: 360
+  heightLogo: 126
+  title: "<br><br><br>"
+  description: "Working with local business networks, community groups, and anchor institutions, Mutual Credit Services and Informal Systems are launching Local Loop Merseyside – offering financial network effects that will bring new powers to the city region's economy."
+  countdown: "April 29 , 2024 15:00:00"
+  urlMouse: "#NetworkGraph"
+
 ### NetworkGraph [ NetworkGraphSection ]
 NetworkGraph:
   enable: true
