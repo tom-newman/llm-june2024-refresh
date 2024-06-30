@@ -100,11 +100,23 @@
       padding: 0 4em;
     }
 
-    .coming-soon header {
-      right: unset;
-      top: 0;
-      width: 100%;
+    .coming-soon {
+      & header {
+        position: fixed;
+        right: unset;
+        top: 0;
+        width: 100%;
+        transition: background-color 0.5s;
+
+        & .header-box {
+            margin: 1em 0;
+        }
+      }
+      &.scrolled header {
+        background-color: var(--llPurple);
+      }
     }
+
 
     header .logo {
       padding: 0;
@@ -203,7 +215,7 @@
       }
     }
     .section-a {
-      padding-top: 10em;
+      padding-top: 8em;
       background: linear-gradient(
                       to right,
                       var(--altPurple1) 0%,
@@ -402,4 +414,17 @@
       }
     }
   </style>
+  <script>
+    // Listen for the scroll event on the window
+  window.addEventListener('scroll', function() {
+    // Check if the scroll position is not 0
+    if (window.pageYOffset !== 0) {
+      // Add a class to the body
+      document.body.classList.add('scrolled');
+    } else {
+      // Remove the class from the body if the scroll position is 0
+      document.body.classList.remove('scrolled');
+    }
+  });
+  </script>
 </head>
