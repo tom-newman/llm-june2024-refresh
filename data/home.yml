@@ -3,7 +3,7 @@
 
 ### Header [ headerSection ]
 header:
-  enable: true
+  enable: false
   logo: "/images/LI-Profile-LL_500x175.png"
   widthLogo: 360
   heightLogo: 126
@@ -12,9 +12,40 @@ header:
   countdown: "April 29 , 2024 15:00:00"
   urlMouse: "#NetworkGraph"
 
+### Section A [ SectionA ]
+SectionA:
+  enable: true
+  image: "/images/ll_onphone.png"
+  title: "Have you looped in yet?"
+  text: "<p>Local Loop Merseyside is a new initiative to turbocharge the local economy by systematically eliminating B2B debts on a 28-day cycle.</p>
+  <p>It's a collaboration between Mutual Credit Services and Informal Systems, and it's powered by Collaborative Finance.</p>
+  <p>Local Loop Merseyside is a pilot project, and we're looking for local businesses to join us and help shape the future of the local economy.</p>"
+
+
+### Section B [ SectionB ]
+SectionB:
+  enable: true
+  image: "/images/ll_realworld.png"
+  title: "LocalLoop is a first<br class='hide-on-mobile'> of its kind finance app launching in Merseyside."
+  text: "<p>Local Loop Merseyside is a new initiative to turbocharge the local economy by systematically eliminating B2B debts on a 28-day cycle.</p>
+  <p>It's a collaboration between Mutual Credit Services and Informal Systems, and it's powered by Collaborative Finance.</p>
+  <p>Local Loop Merseyside is a pilot project, and we're looking for local businesses to join us and help shape the future of the local economy.</p>"
+
+### Our Mission [ OurMission ]
+OurMission:
+  enable: true
+  image: "/images/liverpool_loading.png"
+  title: "Our Mission"
+  text: "<p>Local Loop Merseyside is a new initiative to turbocharge the local economy by systematically eliminating B2B debts on a 28-day cycle.</p>
+  <p>It's a collaboration between Mutual Credit Services and Informal Systems, and it's powered by Collaborative Finance.</p>
+  <p>Local Loop Merseyside is a pilot project, and we're looking for local businesses to join us and help shape the future of the local economy.</p>"
+
+
+
+
 ### NetworkGraph [ NetworkGraphSection ]
 NetworkGraph:
-  enable: true
+  enable: false
   image: "/images/Obligations_fees_low_res_30margin.png"
   title: "The power of the network graph..."
   text: "<p>Under business-as-usual, we know about our customers and suppliers, and maybe a little about our supply chain here and there.</p>
@@ -92,26 +123,19 @@ team:
 ### Contact [ contactSection ]
 contact:
   enable: true
-  image: "/images/PurpleBackground.png"
-  title: "Get in touch"
-  text: "<p>Contact us via the form, or using the details below.</p>"
+  image: "/images/pins.png"
+  title: "Register your interest to get invited to the trading Map"
+  text: "<p>One of our team will be in touch.</p>"
   formspreeURL: "https://formspree.io/f/xayggrbz"
-  contactInfo:
-      - title: "Address"
-        icon: "fa-solid fa-location-dot"
-        text: "Mutual Credit Services<br>DoES Liverpool<br>1st Floor, The Tapestry<br>68-76 Kempston Street<br>Liverpool, L3 8HL"
 
-      - title: "Phone number"
-        icon: "fas fa-phone"
-        text: "0151 703 0081"
-
-      - title: "Email"
-        icon: "fas fa-paper-plane"
-        text: "hello@localloop-merseyside.co.uk"
+### OurPartners [ OurPartners ]
+OurPartners:
+  enable: true
+  title: "Our strategic partners"
 
 ### Subscribe [ subscribeSection ]
 subscribe:
-  enable: true
+  enable: false
   image: "/images/PurpleBackground.png"
   title: "Could this benefit your business? Find out now."
   icon: "fas fa-paper-plane"

@@ -1,0 +1,46 @@
+{{ with .Site.Data.home.SectionB }}
+{{ if .enable }}
+
+{{ "<!-- Section B -->" | safeHTML }}
+<section class="section-b" id="section-b"  style="background-image: url({{ .image | absURL }});">
+  <div class="container-fluid">
+    <div class="row">
+
+        <div class="col-md-6 left-box">
+
+          <div class="intro-text wow fadeUp" data-wow-delay=".3s">
+            <h2>{{ .title | safeHTML }}</h2>
+            {{ .text | safeHTML }}
+            <a class="nextSection wow fadeUp" data-wow-delay=".3s" href="{{ $.Site.BaseURL }}{{ "#OurMission" }}">
+              <span>Our Mission</span><i class="fas fa-arrow-down"></i>
+            </a>
+          </div>
+
+        </div>
+
+        <div class="col-md-6 right-box">
+          <div class="row">
+      
+            {{ range .experience }}
+            <div class="col-md-3">
+              <div class="experience-box wow fadeUp" data-wow-delay=".3s">
+                <div class="icon">
+                  <i aria-hidden="true" class="{{ .icon }}"></i>
+                </div>
+                <h4>{{ .title }}</h4>
+                  <div class="timer">
+                    <span class="number">{{ .count }}</span>
+                  </div>
+              </div>
+            </div>
+            {{ end }}
+            
+          </div>
+        </div>
+
+    </div>
+  </div>
+</section>
+
+{{ end }}
+{{ end }}

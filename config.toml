@@ -12,35 +12,10 @@ DefaultContentLanguage = "en" # Site language. Available translations in the the
 # Menu Settings
 [menu]
 [[menu.main]]
-  identifier = "NetworkGraph"
-  name = "Network Graph"
-  url = "#NetworkGraph"
-  weight = 1
-[[menu.main]]
-  identifier = "Benefits"
-  name = "Benefits"
-  url = "#benefits"
-  weight = 2
-[[menu.main]]
-  identifier = "subscribe"
-  name = "Map & Subscribe"
-  url = "#subscribe"
-  weight = 3
-[[menu.main]]
-  identifier = "team"
-  name = "Team"
-  url = "#team"
-  weight = 4
-[[menu.main]]
   identifier = "contact"
   name = "Contact"
   url = "#contact"
-  weight = 5
-[[menu.main]]
-  identifier = "blog"
-  name = "Blog"
-  url = "blog/"
-  weight = 6
+  weight = 1
 
 # Main Settings
 [params]

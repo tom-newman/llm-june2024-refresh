@@ -5,12 +5,11 @@ type: coming-soon
 
 # Content section
 sections:
-  - headerSection
-  - NetworkGraphSection
-  - benefitsSection
-  - subscribeSection
-  - teamSection
+  - SectionA
+  - SectionB
+  - OurMission
   - contactSection
+  - OurPartners
 
 # Background effect
 connectionsEffect:

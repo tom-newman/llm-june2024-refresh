@@ -1,0 +1,365 @@
+<head>
+  <title>{{ .Title }}</title>
+
+  {{ "<!-- Meta -->" | safeHTML }}
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="author" content="{{ .Param "authorName" }}" />
+  {{ $keywords := .Site.Params.defaultKeywords | default (slice "" | first 0) }}
+  {{ if isset .Params "tags" }}{{ range .Params.tags }}{{ $keywords = $keywords | append . }}{{ end }}{{ end }}
+  {{ if isset .Params "keywords" }}{{ range .Params.keywords }}{{ $keywords = $keywords | append . }}{{ end }}{{ end }}
+  {{ if gt (len $keywords) 0 }}
+  <meta name="keywords" content="{{ delimit (uniq $keywords) ", " }}">
+  {{ end }}
+  {{ $description_plain := default .Site.Params.defaultDescription .Description | markdownify | plainify }}
+  <meta name="description" content="{{ $description_plain }}">
+  {{ hugo.Generator }}
+
+  {{ "<!-- Google Fonts -->" | safeHTML }}
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Aldrich:400' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Raleway:500' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Rajdhani:500' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+
+  {{ "<!-- Plugins Stylesheets -->" | safeHTML }}
+  <link rel="stylesheet" href="{{ "plugins/bootstrap/bootstrap.min.css" | absURL }}" />
+  <link rel="stylesheet" href="{{ "plugins/font-awesome/css/font-awesome.min.css" | absURL }}" />
+  <link rel="stylesheet" href="{{ "plugins/slicknav/slicknav.min.css" | absURL }}" />
+
+  <link rel="stylesheet" href="{{ "plugins/animate/animate.min.css" | absURL }}" />
+
+  {{ "<!-- App Stylesheets -->" | safeHTML }}
+  {{ $style := resources.Get "scss/app.scss" | resources.ToCSS | minify }}
+  <link rel="stylesheet" href="{{ $style.Permalink }}" />
+
+  {{ "<!-- jQuery Core -->" | safeHTML }}
+  <script src="{{ "plugins/jQuery/jquery.min.js" | absURL }}"></script>
+
+  {{ with .Params.html5Video }}
+  {{ if .enable }}
+  {{ "<!-- HTML5 Player-->" | safeHTML }}
+  <script src="{{ "plugins/html5Player/vidbg.min.js" | absURL }}"></script>
+  {{ end }}
+  {{ end }}
+
+  {{ "<!-- Favicon -->" | safeHTML }}
+  <link rel="shortcut icon" href="{{ "images/LI-Profile-LL2.png" | absURL }}" type="image/x-icon" />
+  <link rel="icon" href="{{ "images/LI-Profile-LL2.png" | absURL }}" type="image/x-icon" />
+
+  {{ with site.Params.googleAnalytics }}
+  {{ "<!-- Google Analytics -->" | safeHTML }}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', '{{ . }}');
+  </script>
+  {{ end }}
+
+  {{ range .AlternativeOutputFormats -}}
+  {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+  {{ end -}}
+
+
+  <style>
+    :root {
+      --llPurple: #470F8A;
+      --altPurple1: #6c3ea0;
+      --altPurple2: #572395;
+      --llGreen: #C5FF7F;
+      --altGreen1: #A3FF7F;
+      --offWhite: #fffcf4;
+    }
+
+
+    html, body {
+      font-family: 'Inter', sans-serif;
+    }
+    h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+      font-family: 'Arvo', serif;
+      font-style: italic;
+    }
+    .h1 {
+      font-size: xxx-large;
+      max-width: 12ch;
+    }
+    h2 {
+      font-size: xx-large;
+      max-width: 20ch;
+    }
+
+
+    .container-fluid {
+      padding: 0 4em;
+    }
+
+    .coming-soon header {
+      right: unset;
+      top: 0;
+      width: 100%;
+    }
+
+    header .logo {
+      padding: 0;
+
+      & img {
+        margin: 0;
+      }
+    }
+
+    header .menu-container {
+      display: block;
+    }
+
+    .coming-soon header .menu-container>ul>li>a {
+      text-transform: none;
+      font-family: 'Inter';
+      background: var(--llGreen);
+      padding: 15px;
+      border-radius: 25px;
+      color: var(--llPurple);
+      font-weight: bold;
+    }
+
+    .section-a, .section-b, .our-mission, .section-contact, .our-partners, footer {  
+      background-repeat: no-repeat;
+      background-position: right;
+      background-size: 50%;
+      background-color: var(--llPurple);
+      color: var(--llGreen);
+      padding: 4em 0;
+
+      & h1, .h1, h2, .h2 {
+        margin-bottom: 1em;
+      }
+      & p {
+        max-width: 50ch;
+        font-size: 135%;
+        margin-bottom: 1.5em;
+      }
+      & a.nextSection {
+        cursor: pointer;
+        background-color: transparent;
+        border-color: var(--llGreen);
+        border-width: 2px;
+        border-style: solid;
+        color: var(--llGreen);
+        border-radius: 2em;
+        padding: 0.25em 0.25em 0.25em 1.5em;
+        width: fit-content;
+        margin: unset;
+        font-weight: 600;
+        font-size: 13px;
+        display: flex;
+        align-items: center;
+
+        & i {
+          color: var(--llPurple);
+          line-height: 18px;
+          margin-left: 1.5em;
+          background-color: var(--llGreen);
+          padding: 0.35em;
+          border-radius: 2em;
+          font-size: 22px;
+        }
+
+        &:hover {
+          background-color: var(--llGreen);
+          color: var(--llPurple);
+        }
+      }
+    }
+    .section-a {
+      padding-top: 10em;
+      background: linear-gradient(
+                      to right,
+                      var(--altPurple1) 0%,
+                      var(--altPurple1) 50%,
+                      var(--llPurple) 50%,
+                      var(--llPurple) 100%
+                    );;
+
+      & .row .col-md-6 {             
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+
+    }
+    .section-b {
+      background-color: var(--altPurple2);
+    }
+
+    .our-mission {
+      background-color: var(--llPurple);
+
+      & .row .col-md-6 {
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        display: flex;
+        align-items: center;
+      }
+
+    }
+
+    .section-contact, .our-partners, footer{
+      background-color: var(--offWhite);
+      color: var(--llPurple);
+    }
+
+    .section-contact {
+      & .row .col-md-6 {
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+
+        & h1, .h1, h2, .h2 {
+          max-width: 20ch;
+        }
+
+        &.right-box, &.left-box {
+          flex-direction: column;
+          padding: 75px 80px;
+        }
+      }
+      & form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: end;
+          
+        & input[type=text], input[type=email] {
+          border-color: var(--llPurple);
+          border-radius: 2em;
+        }
+        & input[type=submit], button[type=submit] {
+          background-color: var(--llGreen);
+          border-color: var(--llPurple);
+          color: var(--llPurple);
+          border-radius: 2em;
+          padding: 0.25em 0.25em 0.25em 1.5em;
+          width: unset;
+          margin: unset;
+          font-weight: 600;
+          font-size: 13px;
+          display: flex;
+          align-items: center;
+
+          & i {
+            color: var(--llGreen);
+            line-height: normal;
+            margin-left: 1.5em;
+            background-color: var(--llPurple);
+            padding: 0.35em;
+            border-radius: 2em;
+            font-size: 22px;
+          }
+
+          &:hover {
+            background-color: var(--llPurple);
+            color: var(--llGreen);
+          }
+        }
+      }
+
+    }
+
+    .our-partners {
+      & .intro-text {
+        margin: 0 auto 4em;
+
+        & h2, .h2 {
+          max-width: unset;
+        }
+      }
+
+      & .partner-logos {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 2em 0;
+        
+        & .col {
+          display: flex;
+          justify-content: center;
+
+          & img {
+            max-width: min(175px, 100%);
+            height: auto;
+          }
+        }
+      }
+    }
+    footer {
+      & .copyright, a {
+        color: var(--llPurple);
+      }
+    }
+    @media screen and (max-width: 767px){
+      .container-fluid {
+        padding: 0 2em;
+      }
+      header {
+        background-color: var(--llPurple);
+
+        & .container-fluid {
+          padding: 0 1em;
+        }
+
+        & .header-box {
+          margin: 1em 0;
+
+          & .logo img {
+            max-width: 80%;
+          }
+        }
+      }
+
+      .section-a, .section-b, .our-mission, .section-contact, .our-partners, footer {
+        background-position: top;
+        background-size: 100vw;
+      }
+      .section-a {
+        background: linear-gradient(
+                      to bottom,
+                      var(--altPurple1) 0%,
+                      var(--altPurple1) 90vw,
+                      var(--llPurple) 120vw,
+                      var(--llPurple) 100%
+                    );
+        padding-top: 6em;
+
+        & .row .col-md-6:first-child {
+          min-height: 100vw;
+        }
+      }
+      .section-b {
+        padding-top: calc(100vw + 6em);
+      }
+      .section-contact {
+        & .row .col-md-6 {
+          &.left-box, &.right-box {
+
+            padding: unset;
+
+            &:first-child {
+              min-height: 100vw;
+            }
+          }
+        }
+      }
+        
+      .hide-on-mobile {
+        display: none;
+      }
+    }
+  </style>
+</head>

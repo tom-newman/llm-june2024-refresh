@@ -1,0 +1,36 @@
+{{ with .Site.Data.home.OurPartners }}
+{{ if .enable }}
+
+{{ "<!-- Our Partners -->" | safeHTML }}
+<section class="our-partners" id="OurPartners">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <div class="intro-text wow fadeUp" data-wow-delay=".3s">
+          <h2>{{ .title | safeHTML }}</h2>
+          {{ .text | safeHTML }}
+        </div>
+      </div>
+    </div>
+    <div class="row  row-cols-md-5 row-cols-1 partner-logos py-5">
+      <div class="col">
+        <img src="{{ "images/downtown_member.png" | absURL }}" />
+      </div>
+      <div class="col">
+        <img src="{{ "images/innovate_uk.png" | absURL }}" />
+      </div>
+      <div class="col">
+        <img src="{{ "images/lancaster_university.png" | absURL }}" />
+      </div>
+      <div class="col">
+        <img src="{{ "images/liverpool_chamber.png" | absURL }}" class="px-4" />
+      </div>
+      <div class="col">
+        <img src="{{ "images/university_of_liverpool.png" | absURL }}" />
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ end }}
+{{ end }}
