@@ -69,350 +69,257 @@
 
 
   <style>
-    :root {
-      --llPurple: #470F8A;
-      --altPurple1: #6c3ea0;
-      --altPurple2: #572395;
-      --llGreen: #C5FF7F;
-      --altGreen1: #A3FF7F;
-      --offWhite: #fffcf4;
-    }
-
-
-    html, body {
-      font-family: 'Inter', sans-serif;
-    }
-    h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-      font-family: 'Arvo', serif;
-      font-style: italic;
-    }
-    .h1 {
-      font-size: xxx-large;
-      max-width: 12ch;
-    }
-    h2 {
-      font-size: xx-large;
-      max-width: 20ch;
-    }
-
-
+  :root {
+    --llPurple: #470F8A;
+    --altPurple1: #6c3ea0;
+    --altPurple2: #572395;
+    --llGreen: #C5FF7F;
+    --altGreen1: #A3FF7F;
+    --offWhite: #fffcf4;
+  }
+  html, body {
+    font-family: 'Inter', sans-serif;
+  }
+  h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Arvo', serif;
+    font-style: italic;
+  }
+  .h1 {
+    font-size: xxx-large;
+    max-width: 12ch;
+  }
+  h2 {
+    font-size: xx-large;
+    max-width: 20ch;
+  }
+  .container-fluid {
+    padding: 0 4em;
+  }
+  .coming-soon header {
+    position: fixed;
+    right: unset;
+    top: 0;
+    width: 100%;
+    transition: background-color 0.5s;
+  }
+  .coming-soon header .header-box {
+    margin: 1em 0;
+  }
+  .coming-soon.scrolled header {
+    background-color: var(--llPurple);
+  }
+  header .logo {
+    padding: 0;
+  }
+  header .logo img {
+    margin: 0;
+  }
+  header .menu-container {
+    display: block;
+  }
+  .coming-soon header .menu-container > ul > li > a {
+    text-transform: none;
+    font-family: 'Inter';
+    background: var(--llGreen);
+    padding: 15px;
+    border-radius: 25px;
+    color: var(--llPurple);
+    border: 2px solid var(--llGreen);
+    font-weight: bold;
+    background-image: linear-gradient(to right, var(--llGreen) 0%, var(--llGreen) 50%, var(--llPurple) 50%, var(--llPurple) 100%);
+    background-size: 200% 100%;
+    background-position: left;
+    transition: background-position 0.5s;
+  }
+  .coming-soon header .menu-container > ul > li > a:hover {
+    background-position: right;
+    color: var(--llGreen);
+    border: 2px solid var(--llGreen);
+  }
+  .section-a, .section-b, .our-mission, .section-contact, .our-partners, footer {
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 50%;
+    background-color: var(--llPurple);
+    color: var(--llGreen);
+    padding: 4em 0;
+  }
+  .section-a h1, .section-a .h1, .section-a h2, .section-a .h2, .section-b h1, .section-b .h1, .section-b h2, .section-b .h2, .our-mission h1, .our-mission .h1, .our-mission h2, .our-mission .h2, .section-contact h1, .section-contact .h1, .section-contact h2, .section-contact .h2, .our-partners h1, .our-partners .h1, .our-partners h2, .our-partners .h2, footer h1, footer .h1, footer h2, footer .h2 {
+    margin-bottom: 1em;
+  }
+  .section-a p, .section-b p, .our-mission p, .section-contact p, .our-partners p, footer p {
+    max-width: 50ch;
+    font-size: 135%;
+    margin-bottom: 1.5em;
+  }
+  .section-a a.nextSection, .section-b a.nextSection, .our-mission a.nextSection, .section-contact a.nextSection, .our-partners a.nextSection, footer a.nextSection {
+    cursor: pointer;
+    background-image: linear-gradient(to right, transparent 0%, transparent 50%, var(--llGreen) 50%, var(--llGreen) 100%);
+    background-size: 200% 100%;
+    background-position: left;
+    transition: background-position 0.5s;
+    border-color: var(--llGreen);
+    border-width: 2px;
+    border-style: solid;
+    color: var(--llGreen);
+    border-radius: 2em;
+    padding: 0.25em 0.25em 0.25em 1.5em;
+    width: fit-content;
+    margin: unset;
+    font-weight: 600;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+  }
+  .section-a a.nextSection i, .section-b a.nextSection i, .our-mission a.nextSection i, .section-contact a.nextSection i, .our-partners a.nextSection i, footer a.nextSection i {
+    color: var(--llPurple);
+    line-height: 18px;
+    margin-left: 1.5em;
+    background-color: var(--llGreen);
+    padding: 0.35em;
+    border-radius: 2em;
+    font-size: 22px;
+  }
+  .section-a a.nextSection:hover, .section-b a.nextSection:hover, .our-mission a.nextSection:hover, .section-contact a.nextSection:hover, .our-partners a.nextSection:hover, footer a.nextSection:hover {
+    background-position: right;
+    color: var(--llPurple);
+  }
+  .section-a {
+    padding-top: 8em;
+    background: linear-gradient(to right, var(--altPurple1) 0%, var(--altPurple1) 50%, var(--llPurple) 50%, var(--llPurple) 100%);
+  }
+  .section-a .row .col-md-6 {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .section-b {
+    background-color: var(--altPurple2);
+  }
+  .our-mission .row .col-md-6 {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    display: flex;
+    align-items: center;
+  }
+  .section-contact, .our-partners, footer {
+    background-color: var(--offWhite);
+    color: var(--llPurple);
+  }
+  .section-contact .row .col-md-6 h1, .section-contact .row .col-md-6 .h1, .section-contact .row .col-md-6 h2, .section-contact .row .col-md-6 .h2 {
+    max-width: 20ch;
+  }
+  .section-contact .row .col-md-6.right-box, .section-contact .row .col-md-6.left-box {
+    flex-direction: column;
+    padding: 75px 80px;
+  }
+  .section-contact form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: end;
+  }
+  .section-contact form input[type=text], .section-contact form input[type=email] {
+    border-color: var(--llPurple);
+    border-radius: 2em;
+  }
+  .section-contact form input[type=submit], .section-contact form button[type=submit] {
+    border-color: var(--llPurple);
+    color: var(--llPurple);
+    border-radius: 2em;
+    padding: 0.25em 0.25em 0.25em 1.5em;
+    width: unset;
+    margin: unset;
+    font-weight: 600;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(to right, var(--llGreen) 0%, var(--llGreen) 50%, var(--llPurple) 50%, var(--llPurple) 100%);
+    background-size: 200% 100%;
+    background-position: left;
+    transition: background-position 0.5s;
+  }
+  .section-contact form input[type=submit]:hover, .section-contact form button[type=submit]:hover {
+    background-position: right;
+    color: var(--llGreen);
+  }
+  .section-contact form input[type=submit] i, .section-contact form button[type=submit] i {
+    color: var(--llGreen);
+    line-height: normal;
+    margin-left: 1.5em;
+    background-color: var(--llPurple);
+    padding: 0.35em;
+    border-radius: 2em;
+    font-size: 22px;
+  }
+  .section-contact form input[type=submit]:hover, .section-contact form button[type=submit]:hover {
+    background-color: var(--llPurple);
+    color: var(--llGreen);
+  }
+  .our-partners .intro-text {
+    margin: 0 auto 4em;
+  }
+  .our-partners .intro-text h2, .our-partners .intro-text .h2 {
+    max-width: unset;
+  }
+  .our-partners .partner-logos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2em 0;
+  }
+  .our-partners .partner-logos .col {
+    display: flex;
+    justify-content: center;
+  }
+  .our-partners .partner-logos .col img {
+    max-width: min(175px, 100%);
+    height: auto;
+  }
+  footer .copyright, footer a {
+    color: var(--llPurple);
+  }
+  @media screen and (max-width: 767px) {
     .container-fluid {
-      padding: 0 4em;
+      padding: 0 2em;
     }
-
-    .coming-soon {
-      & header {
-        position: fixed;
-        right: unset;
-        top: 0;
-        width: 100%;
-        transition: background-color 0.5s;
-
-        & .header-box {
-            margin: 1em 0;
-        }
-      }
-      &.scrolled header {
-        background-color: var(--llPurple);
-      }
-    }
-
-
-    header .logo {
-      padding: 0;
-
-      & img {
-        margin: 0;
-      }
-    }
-
-    header .menu-container {
-      display: block;
-    }
-
-    .coming-soon header .menu-container>ul>li>a {
-      text-transform: none;
-      font-family: 'Inter';
-      background: var(--llGreen);
-      padding: 15px;
-      border-radius: 25px;
-      color: var(--llPurple);
-      border: 2px solid var(--llGreen);
-      font-weight: bold;
-      background-image: linear-gradient(
-                          to right,
-                          var(--llGreen) 0%,
-                          var(--llGreen) 50%,
-                          var(--llPurple) 50%,
-                          var(--llPurple) 100%
-                        );
-      background-size: 200% 100%;
-      background-position: left;
-      transition: background-position 0.5s;
-
-      &:hover {
-        background-position: right;
-        color: var(--llGreen);
-        border: 2px solid var(--llGreen);
-      }
-    }
-
-    .section-a, .section-b, .our-mission, .section-contact, .our-partners, footer {  
-      background-repeat: no-repeat;
-      background-position: right;
-      background-size: 50%;
+    header {
       background-color: var(--llPurple);
-      color: var(--llGreen);
-      padding: 4em 0;
-
-      & h1, .h1, h2, .h2 {
-        margin-bottom: 1em;
-      }
-      & p {
-        max-width: 50ch;
-        font-size: 135%;
-        margin-bottom: 1.5em;
-      }
-      & a.nextSection {
-        cursor: pointer;
-        background-image: linear-gradient(
-                            to right,
-                            transparent 0%,
-                            transparent 50%,
-                            var(--llGreen) 50%,
-                            var(--llGreen) 100%
-                          );
-        background-size: 200% 100%;
-        background-position: left;
-        transition: background-position 0.5s;
-        border-color: var(--llGreen);
-        border-width: 2px;
-        border-style: solid;
-        color: var(--llGreen);
-        border-radius: 2em;
-        padding: 0.25em 0.25em 0.25em 1.5em;
-        width: fit-content;
-        margin: unset;
-        font-weight: 600;
-        font-size: 13px;
-        display: flex;
-        align-items: center;
-
-        & i {
-          color: var(--llPurple);
-          line-height: 18px;
-          margin-left: 1.5em;
-          background-color: var(--llGreen);
-          padding: 0.35em;
-          border-radius: 2em;
-          font-size: 22px;
-        }
-
-        &:hover {
-          background-position: right;
-          color: var(--llPurple);
-        }
-      }
+    }
+    header .container-fluid {
+      padding: 0 1em;
+    }
+    header .header-box {
+      margin: 1em 0;
+    }
+    header .header-box .logo img {
+      max-width: 80%;
+    }
+    .section-a, .section-b, .our-mission, .section-contact, .our-partners, footer {
+      background-position: top;
+      background-size: 100vw;
     }
     .section-a {
-      padding-top: 8em;
-      background: linear-gradient(
-                      to right,
-                      var(--altPurple1) 0%,
-                      var(--altPurple1) 50%,
-                      var(--llPurple) 50%,
-                      var(--llPurple) 100%
-                    );
-
-      & .row .col-md-6 {             
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center center;
-      }
-
+      background: linear-gradient(to bottom, var(--altPurple1) 0%, var(--altPurple1) 90vw, var(--llPurple) 120vw, var(--llPurple) 100%);
+      padding-top: 6em;
+    }
+    .section-a .row .col-md-6:first-child {
+      min-height: 100vw;
     }
     .section-b {
-      background-color: var(--altPurple2);
+      padding-top: calc(100vw + 6em);
     }
-
-    .our-mission {
-      background-color: var(--llPurple);
-
-      & .row .col-md-6 {
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: contain;
-        display: flex;
-        align-items: center;
-      }
-
+    .section-contact .row .col-md-6 {
+      padding: unset;
     }
-
-    .section-contact, .our-partners, footer{
-      background-color: var(--offWhite);
-      color: var(--llPurple);
+    .section-contact .row .col-md-6:first-child {
+      min-height: 100vw;
     }
-
-    .section-contact {
-      & .row .col-md-6 {
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: contain;
-
-        & h1, .h1, h2, .h2 {
-          max-width: 20ch;
-        }
-
-        &.right-box, &.left-box {
-          flex-direction: column;
-          padding: 75px 80px;
-        }
-      }
-      & form {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        align-items: end;
-          
-        & input[type=text], input[type=email] {
-          border-color: var(--llPurple);
-          border-radius: 2em;
-        }
-        & input[type=submit], button[type=submit] {
-          border-color: var(--llPurple);
-          color: var(--llPurple);
-          border-radius: 2em;
-          padding: 0.25em 0.25em 0.25em 1.5em;
-          width: unset;
-          margin: unset;
-          font-weight: 600;
-          font-size: 13px;
-          display: flex;
-          align-items: center;
-          background-image: linear-gradient(
-                              to right,
-                              var(--llGreen) 0%,
-                              var(--llGreen) 50%,
-                              var(--llPurple) 50%,
-                              var(--llPurple) 100%
-                            );
-          background-size: 200% 100%;
-          background-position: left;
-          transition: background-position 0.5s;
-
-          &:hover {
-            background-position: right;
-            color: var(--llGreen);
-          }
-
-          & i {
-            color: var(--llGreen);
-            line-height: normal;
-            margin-left: 1.5em;
-            background-color: var(--llPurple);
-            padding: 0.35em;
-            border-radius: 2em;
-            font-size: 22px;
-          }
-
-          &:hover {
-            background-color: var(--llPurple);
-            color: var(--llGreen);
-          }
-        }
-      }
-
+    .hide-on-mobile {
+      display: none;
     }
-
-    .our-partners {
-      & .intro-text {
-        margin: 0 auto 4em;
-
-        & h2, .h2 {
-          max-width: unset;
-        }
-      }
-
-      & .partner-logos {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        padding: 2em 0;
-        
-        & .col {
-          display: flex;
-          justify-content: center;
-
-          & img {
-            max-width: min(175px, 100%);
-            height: auto;
-          }
-        }
-      }
-    }
-    footer {
-      & .copyright, a {
-        color: var(--llPurple);
-      }
-    }
-    @media screen and (max-width: 767px){
-      .container-fluid {
-        padding: 0 2em;
-      }
-      header {
-        background-color: var(--llPurple);
-
-        & .container-fluid {
-          padding: 0 1em;
-        }
-
-        & .header-box {
-          margin: 1em 0;
-
-          & .logo img {
-            max-width: 80%;
-          }
-        }
-      }
-
-      .section-a, .section-b, .our-mission, .section-contact, .our-partners, footer {
-        background-position: top;
-        background-size: 100vw;
-      }
-      .section-a {
-        background: linear-gradient(
-                      to bottom,
-                      var(--altPurple1) 0%,
-                      var(--altPurple1) 90vw,
-                      var(--llPurple) 120vw,
-                      var(--llPurple) 100%
-                    );
-        padding-top: 6em;
-
-        & .row .col-md-6:first-child {
-          min-height: 100vw;
-        }
-      }
-      .section-b {
-        padding-top: calc(100vw + 6em);
-      }
-      .section-contact {
-        & .row .col-md-6 {
-          &.left-box, &.right-box {
-
-            padding: unset;
-
-            &:first-child {
-              min-height: 100vw;
-            }
-          }
-        }
-      }
-        
-      .hide-on-mobile {
-        display: none;
-      }
-    }
+  }
   </style>
   <script>
     // Listen for the scroll event on the window
