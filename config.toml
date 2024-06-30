@@ -1,6 +1,6 @@
-# General Settings
+# Netlify configuration
 title = "Local Loop Merseyside"
-baseURL = "https://localloop-merseyside.co.uk/" #YOUR SITE URL
+baseURL = "/"
 languageCode = "en-uk"
 theme = "woody"
 resourceDir = "resources"
