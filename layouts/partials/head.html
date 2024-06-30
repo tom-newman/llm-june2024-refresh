@@ -125,7 +125,24 @@
       padding: 15px;
       border-radius: 25px;
       color: var(--llPurple);
+      border: 2px solid var(--llGreen);
       font-weight: bold;
+      background-image: linear-gradient(
+                          to right,
+                          var(--llGreen) 0%,
+                          var(--llGreen) 50%,
+                          var(--llPurple) 50%,
+                          var(--llPurple) 100%
+                        );
+      background-size: 200% 100%;
+      background-position: left;
+      transition: background-position 0.5s;
+
+      &:hover {
+        background-position: right;
+        color: var(--llGreen);
+        border: 2px solid var(--llGreen);
+      }
     }
 
     .section-a, .section-b, .our-mission, .section-contact, .our-partners, footer {  
@@ -146,7 +163,16 @@
       }
       & a.nextSection {
         cursor: pointer;
-        background-color: transparent;
+        background-image: linear-gradient(
+                            to right,
+                            transparent 0%,
+                            transparent 50%,
+                            var(--llGreen) 50%,
+                            var(--llGreen) 100%
+                          );
+        background-size: 200% 100%;
+        background-position: left;
+        transition: background-position 0.5s;
         border-color: var(--llGreen);
         border-width: 2px;
         border-style: solid;
@@ -171,7 +197,7 @@
         }
 
         &:hover {
-          background-color: var(--llGreen);
+          background-position: right;
           color: var(--llPurple);
         }
       }
@@ -184,7 +210,7 @@
                       var(--altPurple1) 50%,
                       var(--llPurple) 50%,
                       var(--llPurple) 100%
-                    );;
+                    );
 
       & .row .col-md-6 {             
         background-size: contain;
@@ -241,7 +267,6 @@
           border-radius: 2em;
         }
         & input[type=submit], button[type=submit] {
-          background-color: var(--llGreen);
           border-color: var(--llPurple);
           color: var(--llPurple);
           border-radius: 2em;
@@ -252,6 +277,21 @@
           font-size: 13px;
           display: flex;
           align-items: center;
+          background-image: linear-gradient(
+                              to right,
+                              var(--llGreen) 0%,
+                              var(--llGreen) 50%,
+                              var(--llPurple) 50%,
+                              var(--llPurple) 100%
+                            );
+          background-size: 200% 100%;
+          background-position: left;
+          transition: background-position 0.5s;
+
+          &:hover {
+            background-position: right;
+            color: var(--llGreen);
+          }
 
           & i {
             color: var(--llGreen);
