@@ -17,9 +17,8 @@ SectionA:
   enable: true
   image: "/images/ll_onphone.png"
   title: "Have you looped in yet?"
-  text: "<p>Local Loop Merseyside is a new initiative to turbocharge the local economy by systematically eliminating B2B debts on a 28-day cycle.</p>
-  <p>It's a collaboration between Mutual Credit Services and Informal Systems, and it's powered by Collaborative Finance.</p>
-  <p>Local Loop Merseyside is a pilot project, and we're looking for local businesses to join us and help shape the future of the local economy.</p>"
+  text: "<p>By joining Local Loop, you can improve your cash flow, get paid on time, and pay your suppliers promptly, fostering better business relationships.</p>
+          <p>Start by claiming your business on the trading map, and say goodbye to the fear, uncertainty, and debt associated with late payments.</p>"
 
 
 ### Section B [ SectionB ]
@@ -27,18 +26,17 @@ SectionB:
   enable: true
   image: "/images/ll_realworld.png"
   title: "LocalLoop is a first<br class='hide-on-mobile'> of its kind finance app launching in Merseyside."
-  text: "<p>Local Loop Merseyside is a new initiative to turbocharge the local economy by systematically eliminating B2B debts on a 28-day cycle.</p>
-  <p>It's a collaboration between Mutual Credit Services and Informal Systems, and it's powered by Collaborative Finance.</p>
-  <p>Local Loop Merseyside is a pilot project, and we're looking for local businesses to join us and help shape the future of the local economy.</p>"
+  text: "<p>Managing cash flow and chasing late payments can be a major headache for local businesses, leading to stress and strained relationships.</p>
+          <p>We understand that cash flow issues often stem from a ripple effect of unpaid invoices - a cycle of "I can't pay because I haven't been paid." Traditional methods like invoice factoring are not the solution.</p>
+          <p>Instead, Local Loop offers a unique, collaborative approach using advanced network science to identify and resolve payment gridlocks. It starts on the map!</p>"
 
 ### Our Mission [ OurMission ]
 OurMission:
   enable: true
   image: "/images/liverpool_loading.png"
   title: "Our Mission"
-  text: "<p>Local Loop Merseyside is a new initiative to turbocharge the local economy by systematically eliminating B2B debts on a 28-day cycle.</p>
-  <p>It's a collaboration between Mutual Credit Services and Informal Systems, and it's powered by Collaborative Finance.</p>
-  <p>Local Loop Merseyside is a pilot project, and we're looking for local businesses to join us and help shape the future of the local economy.</p>"
+  text: "<p>There are many exciting growth opportunities within the local Merseyside business community. However, cash-flow struggles across the SME economy can cause a strain on development.</p>
+          <p>Working with local business networks, community groups, and anchor institutions, Local Loop Merseyside will offer financial network effects that will bring new powers to the city region's economy.</p>"
 
 
 
