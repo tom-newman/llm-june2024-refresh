@@ -1,13 +1,49 @@
 # Netlify configuration
 title = "Local Loop Merseyside"
 baseURL = "https://main--llm-june-2024.netlify.app/" #YOUR SITE URL
-
-[build]
-  command = "hugo"
-  publish = "public"
-
-[build.environment]
-  HUGO_VERSION = "0.101.0"
-
+languageCode = "en-uk"
+theme = "woody"
+resourceDir = "resources"
+paginate = 4
+summaryLength = 50
+DefaultContentLanguage = "en" # Site language. Available translations in the theme's `/i18n` directory.
 
 
+# Menu Settings
+[menu]
+[[menu.main]]
+  identifier = "contact"
+  name = "Contact"
+  url = "#contact"
+  weight = 1
+
+# Main Settings
+[params]
+defaultLogo = "Local Loop Merseyside"
+defaultKeywords = ["clean", "minimal", "blog", "responsive", "google analytics", "bootstrap", "under construction", "coming soon", "modern", "countdown", "hugo theme", "creative"]
+defaultDescription = "Local Loop Merseyside"
+dateFormat = "January 2, 2006"
+authorName = "Mountain-Themes"
+disqusComments = "woody-hugo" #YOUR DISQUS COMMENTS SHORTNAME
+googleAnalytics = " " #YOUR GOOGLE ANALYTICS CODE
+
+# Sidebar
+[params.sidebar]
+enable = 1 #SIDEBAR SHOW: [ 1 - yes, 0 - no ]
+search = 1 #SIDEBAR SEARCH WIDGET: [ 1 - yes, 0 - no ]
+latestPosts = 1 #SIDEBAR LATEST POSTS WIDGET: [ 1 - yes, 0 - no ]
+categories = 1 #SIDEBAR CATEGORIES TAXONOMY WIDGET: [ 1 - yes, 0 - no ]
+tags = 1 #SIDEBAR TAG TAXONOMY WIDGET: [ 1 - yes, 0 - no ]
+
+# Footer Settings
+[params.footer]
+copyright = "<a href='https://mutualcredit.services/' target='_blank'> Mutual Credit Services</a> © 2024."
+
+# Sitemap Settings
+[sitemap]
+changefreq = "monthly"
+priority = 0.5
+filename = "sitemap.xml"
+
+[outputs]
+home = ["HTML", "RSS", "JSON"]
