@@ -15,7 +15,7 @@ header:
 ### Section A [ SectionA ]
 SectionA:
   enable: true
-  image: "/images/ll_onphone.png"
+  image: "/images/LL-PhoneCMYK-arrows.png"
   title: "Have you looped in yet?"
   text: "<p>By joining Local Loop, you can improve your cash flow, get paid on time, and pay your suppliers promptly, fostering better business relationships.</p>
           <p>Start by claiming your business on the trading map, and say goodbye to the fear, uncertainty, and debt associated with late payments.</p>"

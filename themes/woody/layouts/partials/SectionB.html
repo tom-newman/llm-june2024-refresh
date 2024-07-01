@@ -2,7 +2,7 @@
 {{ if .enable }}
 
 {{ "<!-- Section B -->" | safeHTML }}
-<section class="section-b" id="section-b"  style="background-image: url({{ .image | absURL }});">
+<section class="section-b" id="section-b"  style="background-image: url('{{ .image | absURL }}');">
   <div class="container-fluid">
     <div class="row">
 
@@ -40,6 +40,7 @@
 
     </div>
   </div>
+  <div class="overlay-right-fade-up"></div>
 </section>
 
 {{ end }}

@@ -148,7 +148,7 @@
     margin-bottom: 1em;
   }
   .section-a p, .section-b p, .our-mission p, .section-contact p, .our-partners p, footer p {
-    max-width: 50ch;
+    max-width: 39ch;
     font-size: 135%;
     margin-bottom: 1.5em;
   }
@@ -186,7 +186,21 @@
   }
   .section-a {
     padding-top: 8em;
+    position: relative;
+/*     background-image: url('{{ "images/LL-PhoneCMYK-arrows.png" | absURL }}'), linear-gradient(to right, var(--altPurple1) 0%, var(--altPurple1) 50%, var(--llPurple) 50%, var(--llPurple) 100%);   */
     background: linear-gradient(to right, var(--altPurple1) 0%, var(--altPurple1) 50%, var(--llPurple) 50%, var(--llPurple) 100%);
+  }
+  .section-a::before {
+    content: ' ';
+    background-image: url('{{ "images/LL-PhoneCMYK-arrows.png" | absURL }}');
+    background-size: auto calc(100% - 4em);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
   }
   .section-a .row .col-md-6 {
     background-size: contain;
@@ -195,6 +209,16 @@
   }
   .section-b {
     background-color: var(--altPurple2);
+    position: relative;
+  }
+  .section-b::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 70%, rgba(71, 15, 138, 0.5) 100%);
   }
   .our-mission .row .col-md-6 {
     background-repeat: no-repeat;
@@ -209,6 +233,10 @@
   }
   .section-contact .row .col-md-6 h1, .section-contact .row .col-md-6 .h1, .section-contact .row .col-md-6 h2, .section-contact .row .col-md-6 .h2 {
     max-width: 20ch;
+  }
+  .section-contact .row .col-md-6 h2, .section-contact .row .col-md-6 .h2 {
+    max-width: 17ch;
+    text-align: left !important;
   }
   .section-contact .row .col-md-6.right-box, .section-contact .row .col-md-6.left-box {
     flex-direction: column;
@@ -304,11 +332,21 @@
       background: linear-gradient(to bottom, var(--altPurple1) 0%, var(--altPurple1) 90vw, var(--llPurple) 120vw, var(--llPurple) 100%);
       padding-top: 6em;
     }
+    .section-a::before {
+      width: 100%;
+      height: 120vw;
+      background-size: auto 100vw;
+    }
     .section-a .row .col-md-6:first-child {
       min-height: 100vw;
     }
     .section-b {
       padding-top: calc(100vw + 6em);
+      background-image: url('{{ "images/ll_realworld_1.png" | absURL }}') !important;
+    }
+    .section-b::after {
+      content: unset;
+      display: none;
     }
     .section-contact .row .col-md-6 {
       padding: unset;
